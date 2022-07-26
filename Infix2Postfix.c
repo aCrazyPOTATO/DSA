@@ -17,17 +17,7 @@ int space(char);
 void print();         
 int precedence(char); 
 
-int main()
-{
 
-    printf("Enter the infix expression: "); 
-    gets(infix);
-
-    inToPost();
-    print();
-
-    return 0;
-}
 
 void inToPost()
 {
@@ -100,7 +90,7 @@ int precedence(char symbol)
 void print()
 {
     int i = 0;
-    printf("the equivalent postfix expression is: ");
+    printf("Equivalent postfix expression is: ");
     while (postfix[i])
     {
         printf("%c", postfix[i++]); 
@@ -138,4 +128,15 @@ int isEmpty()
         return 1;
     else
         return 0;
+}
+int main()
+{
+
+    printf("Enter  Infix expression: "); 
+    gets(infix);
+
+    inToPost();
+    print();
+
+    return 0;
 }
